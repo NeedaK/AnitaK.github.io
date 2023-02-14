@@ -1,0 +1,19 @@
+body  
+{ 
+
+    font-family: Lato, Times New Roman, sans-serif; 
+}
+b {
+    color:rgb(31, 40, 83);
+} 
+i {
+    color:blue;
+}
+h1 {
+    border: 10px solid #65a6db;
+    background-color: lightblue; 
+    padding: 30px; 
+    text-align: center; 
+    font-size: 35px; 
+    color: white; 
+}
