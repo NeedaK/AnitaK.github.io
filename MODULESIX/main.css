@@ -32,7 +32,7 @@ body {
 /*--- header ---*/
 
 .header {
-	background-image: url('header-background.jpg');
+	background-image: url('header_background.jpg');
 	background-size: cover;
 	background-position: center;
 	position: relative;
