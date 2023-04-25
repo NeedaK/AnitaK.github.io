@@ -12,7 +12,7 @@ body {
   
 .wrapper {
   width: 1000px; /* width of white space */
-  margin: 15px auto 15px auto; /* size of margin */
+  margin: 10px auto 10px auto; /* size of margin */
   border: 3px solid #000000; /* Black border */
   background-color: white; /* Background of white space*/
 }
@@ -22,8 +22,8 @@ header {
 }
 h1 {
   text-align: center; /* Placement of Title of the Page */
-  font-size: 80px; /* Size of Title */
-  width: 940px; /* Width of title Box */
+  font-size: 60px; /* Size of Title */
+  width: 945px; /* Width of title Box */
   height: 140px; /* Height of title Box*/
   margin: 0px; /* space around the border  */
 }
