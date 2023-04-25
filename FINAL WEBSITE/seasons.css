@@ -1,0 +1,95 @@
+
+header, section, footer, aside, nav, article, figure, figcaption {
+  display: block;}
+
+body {
+  color: tan; /* Contact info color */
+  background-color: #f9f8f6; /* Background color infront of the image */
+  background-image: url("back.jpg"); /* Background image */
+  font-family: Garamond, Arial, Verdana; /* fonts types */
+  margin: 0px; /* space aound the border */
+}
+  
+.wrapper {
+  width: 1000px; /* width of white space */
+  margin: 20px auto 20px auto; /* size of margin */
+  border: 3px solid #000000; /* Black border */
+  background-color: white; /* Background of white space*/
+}
+header {
+  height: 160px; /* height of top header */
+  background-color: black; /* color of top header */
+}
+h1 {
+  text-align: center; /* Placement of Title of the Page */
+  font-size: 100px; /* Size of Title */
+  width: 940px; /* Width of title Box */
+  height: 140px; /* Height of title Box*/
+  margin: 0px; /* space around the border  */
+}
+nav, footer {
+  clear: both; 
+  color: black; /* Font color of Footer */
+  background-color: tan; /* Background color of Navigation Bar And Footer */
+  height: 30px; /* Height of Navigation Bar And Footer */
+}
+nav ul {
+  margin: 0px; /* space aound the border */
+  padding: 5px 0px 5px 30px; /* sides of the Navigation Bar's cites */
+}
+nav li {
+  display: inline; /* Keeps the Navigation Bar the same line */
+  margin-right: 150px; /* space around the border */
+}
+nav li a {
+  color: black; /* Font color of the Navigation Bar's cites */
+}
+nav li a:hover, nav li a.current {
+  color: brown; /* Font selection color of the Navigation Bar's cites */
+}
+section.courses {
+  float: left; /* Placement */
+  width: 940px; /* width */
+  border-right: 1px solid #eeeeee; /* border color and size */
+}
+article {
+  clear: both; /* floating the elements are not allowed to float on both sides */
+  overflow: auto; /* adds scrollbars only when necessary */
+  width: 100%; /* width */
+}
+hgroup {
+  margin-top: 40px; /*  */
+}
+figure {
+  float: right; /*  */
+  width: 220px; /*  */
+  height: 220px; /*  */
+  padding: 10px; /*  */
+  margin: 25px; /*  */
+  border: 1px solid #eeeeee; /*  */
+}
+img {
+  width: 220px; /* width of the image */
+  height: 200px; /* height of the image */
+}
+figcaption {
+  font-size: 90%; /*  */
+  text-align: Right; /*  */
+}
+a {
+  color: #de6581;
+  text-decoration: none;}
+h1, h2, h3 {
+  font-weight: normal;}
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;}
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #de6581;}
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #de6581;}
+footer {
+  font-size: 80%;
+  padding: 7px 0px 0px 20px;}
