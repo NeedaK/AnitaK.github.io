@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 <head>
-  <title>Popularity of Gardening</title>
-<style>
+	<title>Gardening Popularity</title>
+	<style>
 header, section, footer, nav, article, figure, figcaption {
   display: block;}
 
@@ -130,98 +129,92 @@ footer {
         </ul>
       </nav>
     </header>
-    <section>
-      <p>Number of people who participate in gardening:</p>
-      <ul id="gardening-stats"></ul>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-      <script src="MoreInfo.js"></script>
-    </section>
-  <script>
-    // JavaScript library
-const gardeningStats = {
-    2010: 5000,
-    2011: 6000,
-    2012: 8000,
-    2013: 10000,
-    2014: 12000,
-    2015: 15000,
-    2016: 18000,
-    2017: 20000,
-    2018: 25000,
-    2019: 30000,
-    2020: 40000,
-  };
-  
-  // JavaScript input
-  const currentYear = 2023;
-  
-  // JavaScript variable in code
-  let growthRate = 0;
-  
-  // JavaScript array in code
-  const growthRates = [0.1, 0.2, 0.3, 0.4, 0.5];
-  
-  // 1st JavaScript functions
-  // JavaScript function to calculate growth rate
-  function calculateGrowthRate() {
-    const randomIndex = Math.floor(Math.random() * growthRates.length);
-    growthRate = growthRates[randomIndex];
-  }
-  
-  // 2nd JavaScript functions
-  // JavaScript function to predict gardening popularity for next 3 years
-  function predictPopularity() {
-    let predictedPopularity = gardeningStats[currentYear];
-  
-    for (let i = 1; i <= 3; i++) {
-      predictedPopularity += predictedPopularity * growthRate;
-    }
-  
-    return predictedPopularity;
-  }
-  
-  // 3rd  JavaScript functions
-  // JavaScript function to check if gardening is popular
-  function isPopular(popularity) {
-    if (popularity > 20000) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  
-  // JavaScript while loop to calculate average growth rate
-  let i = 0;
-  let totalGrowthRate = 0;
-  
-  while (i < growthRates.length) {
-    totalGrowthRate += growthRates[i];
-    i++;
-  }
-  
-  const avgGrowthRate = totalGrowthRate / growthRates.length;
-  
-  // JavaScript switch statement to print gardening popularity status
-  calculateGrowthRate();
-  const predictedPopularity = predictPopularity();
-  
-  switch (true) {
-    case isPopular(predictedPopularity):
-      console.log(`Gardening is very popular with a predicted popularity of ${predictedPopularity} in 2026.`);
-      break;
-    case predictedPopularity < 5000:
-      console.log(`Gardening is not very popular with a predicted popularity of ${predictedPopularity} in 2026.`);
-      break;
-    default:
-      console.log(`Gardening is moderately popular with a predicted popularity of ${predictedPopularity} in 2026.`);
-      break;
-  }
-  
-  </script>
-    <footer>
-      &copy; 2023 Anita Gardening
-    </footer>
-  </div><!-- .wrapper -->     
-    </body>
-    </html>
-    
+    </head>
+		<body>
+			<h2>This page shows how popular gardening has become over the decades and why it was popular.</h2>
+		</body>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<body>
+		
+		<div id="myPlot" style="width:100%;max-width:700px"></div>
+		
+		<script>
+		const xArray = [1920,1930,1940,1950,1960,1970,1980,1990,2000,2010,2020];
+		const yArray = [15,20,25,30,35,40,50,55,60,65,70];
+		
+		// Define Data
+		const data = [{
+		  x:xArray,
+		  y:yArray,
+		  mode:"markers"
+		}];
+		
+		// Define Layout
+		const layout = {
+		  xaxis: {CustomEvent: [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020], title: "Decade"},
+		  yaxis: {CustomEvent: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], title: "Popular Percentage"},  
+		  title: "1920-2020 Gardening Popularity"
+		};
+		
+		// Display using Plotly
+		Plotly.newPlot("myPlot", data, layout);
+		</script>
+	<script>
+		// Get user input for decade
+		var decade = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+		
+		// Define arrays for decade and popularity
+		var decades = [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
+		var popularity = [15, 20, 25, 30, 35, 40, 50, 55, 60, 65, 70];
+		
+		// Function to find the index of the decade in the array
+		function findDecadeIndex(decades, decade) {
+			for (var i = 0; i < decades.length; i++) {
+				if (decades[i] == decade) {
+					return i;
+				}
+			}
+			return -1;
+		}
+		
+		// Find the index of the input decade in the array
+		var index = findDecadeIndex(decades, parseInt(decade));
+		
+		// If input decade is not found in the array, display an error message
+		if (index == -1) {
+			document.write("Sorry, the data for that decade is not available.");
+		}
+		// If input decade is found in the array, display popularity information
+		else {
+			document.write("In the " + decade + "s, gardening was " + popularity[index] + "% popular.");
+		}
+		
+		// While loop to display popularity information for all decades in the array
+		var i = 0;
+		while (i < decades.length) {
+			document.write("<p>In the " + decades[i] + "s, gardening was " + popularity[i] + "% popular.</p>");
+			i++;
+		}
+		
+		// Switch statement to display popularity information based on user input
+		var choice = prompt("Do you want to know the popularity of gardening in a specific decade? (yes or no)");
+		switch (choice) {
+			case "yes":
+				var decade2 = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+				var index2 = findDecadeIndex(decades, parseInt(decade2));
+				if (index2 == -1) {
+					document.write("Sorry, the data for that decade is not available.");
+				}
+				else {
+					document.write("In the " + decade2 + "s, gardening was " + popularity[index2] + "% popular.");
+				}
+				break;
+			case "no":
+				document.write("Okay, have a nice day!");
+				break;
+			default:
+				document.write("Invalid choice.");
+				break;
+		}
+	</script>
+</html>
