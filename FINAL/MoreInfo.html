@@ -2,116 +2,143 @@
 <html>
 <head>
 	<title>Gardening Popularity</title>
-	<style>
-header, section, footer, nav, article, figure, figcaption {
-  display: block;}
-
-body {
-  color: tan; /* Contact info color */
-  background-color: #f9f8f6; /* Background color infront of the image */
-  background-image: url("back3.jpg"); /* Background image */
-  font-family: Garamond, Arial, Verdana; /* fonts types */
-  margin: 0px; /* space aound the border */
-}
-.wrapper {
-  width: 1000px; /* width of white space */
-  margin: 20px auto 20px auto; /* size of margin */
-  border: 3px solid #000000; /* Black border */
-  background-color: white; /* Background of white space*/
-}
-header {
-  height: 160px; /* height of top header */
-  background-color: black; /* color of top header */
-}
-h1 {
-  text-align: center; /* Placement of Title of the Page */
-  font-size: 50px; /* Size of Title */
-  width: 940px; /* Width of title Box */
-  height: 140px; /* Height of title Box*/
-  margin: 0px; /* space around the border  */
-}
-nav, footer {
-  clear: both; 
-  color: black; /* Font color of Footer */
-  background-color: tan; /* Background color of Navigation Bar And Footer */
-  height: 30px; /* Height of Navigation Bar And Footer */
-}
-nav ul {
-  margin: 0px; /* space aound the border */
-  padding: 0px 0px 0px 0px; /* sides of the Navigation Bar's cites */
-}
-nav li {
-  display: inline; /* Keeps the Navigation Bar the same line */
-  margin-right: 150px; /* space around the border */
-}
-nav li a {
-  color: black; /* Font color of the Navigation Bar's cites */
-}
-nav li a:hover, nav li a.current {
-  color: brown; /* Font selection color of the Navigation Bar's cites */
-}
-section.courses {
-  float: right; /* Placement */
-  width: 940px; /* width */
-  border-right: 0px solid #eeeeee; /* border color and size */
-}
-article {
-  clear: both; /* floating the elements are not allowed to float on both sides */
-  overflow: auto; /* adds scrollbars only when necessary */
-  width: 100%; /* width */
-}
-hgroup {
-  margin-top: 40px; /*  */
-}
-figure {
-  float: left; /*  */
-  width: 220px; /*  */
-  height: 220px; /*  */
-  padding: 10px; /*  */
-  margin: 25px; /*  */
-  border: 1px solid #eeeeee; /*  */
-}
-img {
-  width: 220px; /* width of the image */
-  height: 200px; /* height of the image */
-}
-figcaption {
-  font-size: 90%; /*  */
-  text-align: Right; /*  */
-}
-a {
-  color: #de6581;
-  text-decoration: none;}
-h1, h2, h3 {
-  font-weight: normal;}
-h2 {
-  margin: 10px 0px 5px 0px;
-  padding: 0px;}
-h3 {
-  margin: 0px 0px 10px 0px;
-  color: #de6581;}
-ul {
-  clear: both; 
-  color: black; /* Font color of Social Media List */
-  background-color: tan; /* Background color Social Media List */
-  height: 25px; /* Height of Social Media List */
-  margin: 0px; /* space around the border */
-  padding: 5px 0px 5px 30px; /* sides of the Social Media List's cites */
-}
- li {
-  display: inline; /* Keeps the Social Media List the same line */
-  margin-right: 150px; /* space around the border */
-}
- li a {
-  color: black; /* Font color of the Social Media List's cites */
-}
- li a:hover {
-  color: brown; /* Font selection color of the Social Media List's cites */
-}
-footer {
-  font-size: 80%;
-  padding: 5px 0px 0px 15px;}
-</style>
+<style>
+	header, section, footer, nav, article, figure, figcaption 
+	{
+		display: block;
+	}
+	body 
+	{
+	  color: tan; /* Contact info color */
+	  background-color: #f9f8f6; /* Background color infront of the image */
+	  background-image: url("back3.jpg"); /* Background image */
+	  font-family: Garamond, Arial, Verdana; /* fonts types */
+	  margin: 0px; /* space aound the border */
+	}
+	.wrapper 
+	{
+	  width: 1000px; /* width of white space */
+	  margin: 20px auto 20px auto; /* size of margin */
+	  border: 3px solid #000000; /* Black border */
+	  background-color: white; /* Background of white space*/
+	}
+	header 
+	{
+	  height: 160px; /* height of top header */
+	  background-color: black; /* color of top header */
+	}
+	h1 
+	{
+	  text-align: center; /* Placement of Title of the Page */
+	  font-size: 50px; /* Size of Title */
+	  width: 940px; /* Width of title Box */
+	  height: 140px; /* Height of title Box*/
+	  margin: 0px; /* space around the border  */
+	}
+	nav, footer 
+	{
+	  clear: both; 
+	  color: black; /* Font color of Footer */
+	  background-color: tan; /* Background color of Navigation Bar And Footer */
+	  height: 30px; /* Height of Navigation Bar And Footer */
+	}
+	nav ul 
+	{
+	  margin: 0px; /* space aound the border */
+	  padding: 0px 0px 0px 0px; /* sides of the Navigation Bar's cites */
+	}
+	nav li {
+	  display: inline; /* Keeps the Navigation Bar the same line */
+	  margin-right: 150px; /* space around the border */
+	}
+	nav li a {
+	  color: black; /* Font color of the Navigation Bar's cites */
+	}
+	nav li a:hover, nav li a.current {
+	  color: brown; /* Font selection color of the Navigation Bar's cites */
+	}
+	section.courses 
+	{
+	  float: right; /* Placement */
+	  width: 940px; /* width */
+	  border-right: 0px solid #eeeeee; /* border color and size */
+	}
+	article 
+	{
+	  clear: both; /* floating the elements are not allowed to float on both sides */
+	  overflow: auto; /* adds scrollbars only when necessary */
+	  width: 100%; /* width */
+	}
+	hgroup 
+	{
+	  margin-top: 40px; /*  */
+	}
+	figure 
+	{
+	  float: left; /*  */
+	  width: 220px; /*  */
+	  height: 220px; /*  */
+	  padding: 10px; /*  */
+	  margin: 25px; /*  */
+	  border: 1px solid #eeeeee; /*  */
+	}
+	img 
+	{
+	  width: 220px; /* width of the image */
+	  height: 200px; /* height of the image */
+	}
+	figcaption 
+	{
+	  font-size: 90%; /*  */
+	  text-align: Right; /*  */
+	}
+	a 
+	{
+	  color: #de6581;
+	  text-decoration: none;
+	}
+	h1, h2, h3 
+	{
+	  font-weight: normal;
+	}
+	h2 
+	{
+	  margin: 10px 0px 5px 0px;
+	  padding: 0px;
+	}
+	h3 
+	{
+	  margin: 0px 0px 10px 0px;
+	  color: #de6581;
+	}
+	ul 
+	{
+	  clear: both; 
+	  color: black; /* Font color of Social Media List */
+	  background-color: tan; /* Background color Social Media List */
+	  height: 25px; /* Height of Social Media List */
+	  margin: 0px; /* space around the border */
+	  padding: 5px 0px 5px 30px; /* sides of the Social Media List's cites */
+	}
+	 li 
+	{
+	  display: inline; /* Keeps the Social Media List the same line */
+	  margin-right: 150px; /* space around the border */
+	}
+	 li a 
+	{
+	  color: black; /* Font color of the Social Media List's cites */
+	}
+	 li a:hover 
+	{
+	  color: brown; /* Font selection color of the Social Media List's cites */
+	}
+	footer 
+	{
+	  font-size: 80%;
+	  padding: 5px 0px 0px 15px;
+	}
+	</style>
 </head>
 <body style = "Background: url(back3.jpg);
                 background-size: cover;
@@ -130,13 +157,12 @@ footer {
       </nav>
     </header>
     </head>
-		<body>
-			<h2>This page shows how popular gardening has become over the decades and why it was popular.</h2>
-		</body>
-		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-		<body>
-		
-		<div id="myPlot" style="width:100%;max-width:700px"></div>
+<body>
+	<h2>This page shows how popular gardening has become over the decades and why it was popular.</h2>
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+	<div id="myPlot" style="width:100%;max-width:700px"></div>
 		
 		<script>
 		const xArray = [1920,1930,1940,1950,1960,1970,1980,1990,2000,2010,2020];
