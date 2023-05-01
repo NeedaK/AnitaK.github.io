@@ -133,11 +133,7 @@
 	{
 	  color: brown; /* Font selection color of the Social Media List's cites */
 	}
-	footer 
-	{
-	  font-size: 80%;
-	  padding: 5px 0px 0px 15px;
-	}
+	script {
 	</style>
 </head>
 <body style = "Background: url(back3.jpg);
@@ -182,65 +178,59 @@
 		  title: "1920-2020 Gardening Popularity"
 		};
 		
+		
 		// Display using Plotly
 		Plotly.newPlot("myPlot", data, layout);
 		</script>
 	<script>
 		// Get user input for decade
-		var decade = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
-		
-		// Define arrays for decade and popularity
-		var decades = [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
-		var popularity = [15, 20, 25, 30, 35, 40, 50, 55, 60, 65, 70];
-		
-		// Function to find the index of the decade in the array
-		function findDecadeIndex(decades, decade) {
-			for (var i = 0; i < decades.length; i++) {
-				if (decades[i] == decade) {
-					return i;
-				}
-			}
-			return -1;
-		}
-		
-		// Find the index of the input decade in the array
-		var index = findDecadeIndex(decades, parseInt(decade));
-		
-		// If input decade is not found in the array, display an error message
-		if (index == -1) {
-			document.write("Sorry, the data for that decade is not available.");
-		}
-		// If input decade is found in the array, display popularity information
-		else {
-			document.write("In the " + decade + "s, gardening was " + popularity[index] + "% popular.");
-		}
-		
-		// While loop to display popularity information for all decades in the array
-		var i = 0;
-		while (i < decades.length) {
-			document.write("<p>In the " + decades[i] + "s, gardening was " + popularity[i] + "% popular.</p>");
-			i++;
-		}
-		
-		// Switch statement to display popularity information based on user input
-		var choice = prompt("Do you want to know the popularity of gardening in a specific decade? (yes or no)");
-		switch (choice) {
-			case "yes":
-				var decade2 = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
-				var index2 = findDecadeIndex(decades, parseInt(decade2));
-				if (index2 == -1) {
-					document.write("Sorry, the data for that decade is not available.");
-				}
-				else {
-					document.write("In the " + decade2 + "s, gardening was " + popularity[index2] + "% popular.");
-				}
-				break;
-			case "no":
-				document.write("Okay, have a nice day!");
-				break;
-			default:
-				document.write("Invalid choice.");
-				break;
-		}
+var decade = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+
+// Define arrays for decade and popularity
+var decades = [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
+var popularity = [15, 20, 25, 30, 35, 40, 50, 55, 60, 65, 70];
+
+// Function to find the index of the decade in the array
+function findDecadeIndex(decades, decade) {
+    for (var i = 0; i < decades.length; i++) {
+        if (decades[i] == decade) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// Find the index of the input decade in the array
+var index = findDecadeIndex(decades, parseInt(decade));
+
+// If input decade is not found in the array, display an error message
+if (index == -1) {
+    document.write("Sorry, the data for that decade is not available.");
+}
+// If input decade is found in the array, display popularity information
+else {
+    document.write("In the " + decade + "s, gardening was " + popularity[index] + "% popular.");
+}
+
+// Switch statement to display popularity information based on user input
+var choice = prompt("Do you want to know the popularity of gardening in a specific decade? (yes or no)");
+switch (choice) {
+    case "yes":
+        var decade2 = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+        var index2 = findDecadeIndex(decades, parseInt(decade2));
+        if (index2 == -1) {
+            document.write("<p>Sorry, the data for that decade is not available.</p>");
+        }
+        else {
+            document.write("<p>In the " + decade2 + "s, gardening was " + popularity[index2] + "% popular.</p>");
+        }
+        break;
+    case "no":
+        document.write("<p>Okay, have a nice day!</p>");
+        break;
+    default:
+        document.write("<p>Invalid choice.</p>");
+        break;
+}
 	</script>
 </html>
