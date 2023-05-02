@@ -82,16 +82,7 @@
 	  margin: 25px; /*  */
 	  border: 1px solid #eeeeee; /*  */
 	}
-	img 
-	{
-	  width: 220px; /* width of the image */
-	  height: 200px; /* height of the image */
-	}
-	figcaption 
-	{
-	  font-size: 90%; /*  */
-	  text-align: Right; /*  */
-	}
+	
 	a 
 	{
 	  color: #de6581;
@@ -100,6 +91,7 @@
 	h1, h2, h3 
 	{
 	  font-weight: normal;
+		color: #de6581
 	}
 	h2 
 	{
@@ -133,7 +125,14 @@
 	{
 	  color: brown; /* Font selection color of the Social Media List's cites */
 	}
-	script {
+	footer {
+  		font-size: 80%;
+  		padding: 7px 0px 0px 20px;
+}
+	footer img {
+  		height: 5px;
+ 		 width: 4px;
+}
 	</style>
 </head>
 <body style = "Background: url(back3.jpg);
@@ -180,63 +179,79 @@
 		Plotly.newPlot("myPlot", data, layout);
 		</script>
 	<script>
-		// Get user input for decade
-var decade = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+		var decade = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
 
-// Define arrays for decade and popularity
-var decades = [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
-var popularity = [15, 20, 25, 30, 35, 40, 50, 55, 60, 65, 70];
+		// Define arrays for decade and popularity
+		var decades = [1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
+		var popularity = [15, 20, 25, 30, 35, 40, 50, 55, 60, 65, 70];
+		var explain = [
+			"During the 1920s, there was a growing interest in home gardening, as people became more concerned about food quality and security. Victory Gardens, which were promoted during World War I, also became popular during this time.",
+			"In the 1930s, gardening continued to be popular due to economic reasons. The Great Depression caused many people to start growing their own food as a way to save money and be more self-sufficient.",
+			"1940s: During World War II, gardening became even more popular as part of the war effort. Victory Gardens were promoted once again as a way to supplement food rations and boost morale.",
+			"In the 1950s, gardening became a popular hobby as people had more leisure time and disposable income. The rise of suburban living also made it easier for people to have their own gardens.",
+			"The 1960s saw a renewed interest in organic gardening, as people became more aware of the environmental impact of industrial agriculture. The counterculture movement also embraced gardening as a way to live more simply and in tune with nature.",
+			"In the 1970s, the energy crisis led to a resurgence of interest in self-sufficiency and sustainability. Gardening became a popular way to reduce dependence on fossil fuels and to grow food locally.",
+			"During the 1980s, gardening continued to be popular as a way to escape from the stress of modern life. Many people turned to gardening as a form of therapy or relaxation.",
+			"In the 1990s, gardening became more mainstream as it was featured in popular media, such as television shows and magazines. The rise of community gardening also made it more accessible to people who didn't have their own land.",
+			"The 2000s saw a growing interest in sustainable and local food systems, which led to a renewed interest in gardening. The internet also made it easier for people to share information and connect with other gardeners.",
+			"In the 2010s, gardening became more popular among younger generations, who were interested in urban gardening and sustainable living. The rise of social media also made it easier for people to share their gardening experiences and connect with other gardeners around the world.",
+			"In the 2020s, the COVID-19 pandemic has led to a surge in interest in gardening, as people looked for ways to stay active and engaged while practicing social distancing. Gardening has also been seen as a way to reduce stress and anxiety during a challenging time.",
+			];
 
-// Function to find the index of the decade in the array
-function findDecadeIndex(decades, decade) {
-    for (var i = 0; i < decades.length; i++) {
-        if (decades[i] == decade) {
-            return i;
-        }
-    }
-    return -1;
-}
+		// Function to find the index of the decade in the array
+		function findDecadeIndex(decades, decade) {
+		for (var i = 0; i < decades.length; i++) 
+		{
+			if (decades[i] == decade) 
+			{
+			return i;
+			}
+		}
+		return -1;
+		}
 
-// Find the index of the input decade in the array
-var index = findDecadeIndex(decades, parseInt(decade));
+		// Find the index of the input decade in the array
+		var index = findDecadeIndex(decades, parseInt(decade));
 
-// If input decade is not found in the array, display an error message
-if (index == -1) {
-    document.write("Sorry, the data for that decade is not available.");
-}
-// If input decade is found in the array, display popularity information
-else {
-    document.write("In the " + decade + "s, gardening was " + popularity[index] + "% popular.");
-}
+		// If input decade is not found in the array, display an error message
+		if (index == -1) 
+		{
+			document.write("Sorry, the data for that decade is not available.");
+		}
 
-// Switch statement to display popularity information based on user input
-var choice = prompt("Do you want to know the popularity of gardening in a specific decade? (yes or no)");
-switch (choice) {
-    case "yes":
-        var decade2 = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
-        var index2 = findDecadeIndex(decades, parseInt(decade2));
-        if (index2 == -1) {
-            document.write("<p>Sorry, the data for that decade is not available.</p>");
-        }
-        else {
-            document.write("<p>In the " + decade2 + "s, gardening was " + popularity[index2] + "% popular.</p>");
-        }
-        break;
-    case "no":
-        document.write("<p>Okay, have a nice day!</p>");
-        break;
-    default:
-        document.write("<p>Invalid choice.</p>");
-        break;
-}
+		// If input decade is found in the array, display popularity information
+		else
+		{
+		document.write("In the " + decade + "s, gardening was " + popularity[index] + "% popular.");
+		}
+
+		// Switch statement to display popularity information based on user input
+		var choice = prompt("Do you want to know the popularity of gardening in a specific decade? (yes or no)");
+		switch (choice) 
+		{
+			case "yes":
+			var decade2 = prompt("Enter a decade between 1920 and 2020 (in increments of 10):");
+			var index2 = findDecadeIndex(decades, parseInt(decade2));
+			if (index2 == -1) 
+			{
+				document.write("<p>Sorry, the data for that decade is not available.</p>");
+			}
+			else 
+			{
+				document.write("In the " + decade2 + "s, gardening was " + popularity[index2] + "% popular.");
+							document.write(explain[index2])
+			}
+			break;
+			case "no":
+			document.write("Okay, have a nice day!");
+			break;
+			default:
+			document.write("Invalid choice.");
+			break;
+		}
 	</script>
-<body>
-	<h2>There are several reasons why gardening's popularity has improved over the decades:<h2>
-		<ol>
-			<li>During the 1920s and 1930s, many people began to grow their own food in response to the economic difficulties of the Great Depression. The trend continued during World War II when victory gardens were encouraged to help boost food production and conserve resources.</li>
-			<li> In recent years, there has been a growing awareness of the importance of environmental sustainability, and gardening is seen as a way to contribute to this cause. By growing plants and vegetables, gardeners can reduce their carbon footprint, help combat climate change, and create habitats for pollinators and other wildlife.</li>
-			<li>Gardening has been shown to have numerous health benefits, including reducing stress, improving mood, and increasing physical activity. As people have become more health-conscious, gardening has become a popular way to stay active and improve mental and physical well-being.</li>
-			<li>Gardens can be beautiful and tranquil spaces that offer a peaceful respite from the hustle and bustle of daily life. As people have become more interested in creating aesthetically pleasing outdoor spaces, gardening has become a popular hobby and pastime.</li>
-		</ol>
-</body>
+	<footer>
+      &copy; 2023 Anita Gardening
+        <img src="Graphic.jpg"></img>
+    </footer>
 </html>
